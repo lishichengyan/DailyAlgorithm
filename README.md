@@ -13,21 +13,24 @@ This repo is a collection of frequently-used algorithms 收集常用的算法
 2. bfs
 3. dfs  
 ## Graph  
-1. Dijstra最短路径算法
-2. Bellman-Ford算法
-3. 拓扑排序
-4. Kruskal算法
-5. Prim算法  
+1. 图的表示（邻接表和邻接矩阵）
+2. Dijstra最短路径算法
+3. Bellman-Ford算法
+4. 拓扑排序
+5. Kruskal算法
+6. Prim算法  
 ## Tree  
-1. 前序遍历（递归+非递归）  
-2. 后序遍历（同上）  
-3. 中序遍历（同上）  
-4. 层次遍历  
-5. 求树高  
+1. 二叉树的表示
+2. 前序遍历（递归+非递归）  
+3. 后序遍历（同上）  
+4. 中序遍历（同上）  
+5. 层次遍历  
+6. 求树高  
 ## String  
 1. LCS  
 ## Basic
 包括了一些基本的算法，如下：
 1. 快速幂  
 2. peasant multiplication  
-3. 求中位数（不用排序）
+3. 求中位数（不用排序）  
+4. 开根号
