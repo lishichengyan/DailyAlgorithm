@@ -8,16 +8,16 @@ This repo is a collection of frequently-used algorithms 收集常用的算法
 3. 基数排序  
 4. 归并排序  
 5. 冒泡排序  
-**Search**  
+**Search**    
 1. 二分查找  
 2. bfs
-3. dfs
+3. dfs  
 **Graph**  
 1. Dijstra最短路径算法
 2. Bellman-Ford算法
 3. 拓扑排序
 4. Kruskal算法
-5. Prim算法
+5. Prim算法  
 **Tree**  
 1. 前序遍历（递归+非递归）  
 2. 后序遍历（同上）  
