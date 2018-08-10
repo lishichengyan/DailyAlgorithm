@@ -34,3 +34,4 @@ This repo is a collection of frequently-used algorithms 收集常用的算法
 2. peasant multiplication  
 3. 求中位数（不用排序）  
 4. 开根号
+5. 求幂集
