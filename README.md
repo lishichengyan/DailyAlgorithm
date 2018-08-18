@@ -20,12 +20,15 @@ This repo is a collection of frequently-used algorithms 收集常用的算法
 5. Kruskal算法
 6. Prim算法  
 ## Tree  
+因为其特殊性，从Graph中单列出来  
 1. 二叉树的表示
 2. 前序遍历（递归+非递归）  
 3. 后序遍历（同上）  
 4. 中序遍历（同上）  
 5. 层次遍历  
 6. 求树高  
+7. 二叉索引树 (Binary Indexed Tree)
+8. BST
 ## String  
 1. LCS  
 ## Basic
