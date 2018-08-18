@@ -41,5 +41,8 @@ This repo is a collection of frequently-used algorithms 收集常用的算法
 ## Advanced Techniques  
 高级技巧不是某个具体的算法，而是算法设计的技巧/思想，各目录下包含了该学习该技巧常见的例子：
 ### Divide and Conquer
+1. maximum subarray
 ### Greedy
 ### Dynamic Programming
+1. subset sum problem
+### Randomized Algorithm
