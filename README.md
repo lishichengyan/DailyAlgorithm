@@ -38,3 +38,8 @@ This repo is a collection of frequently-used algorithms 收集常用的算法
 3. 求中位数（不用排序）  
 4. 开根号
 5. 求幂集
+## Advanced Techniques  
+高级技巧不是某个具体的算法，而是算法设计的技巧/思想，各目录下包含了该学习该技巧常见的例子：
+### Divide and Conquer
+### Greedy
+### Dynamic Programming
