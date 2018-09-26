@@ -1,4 +1,5 @@
 // 这样干在leetcode上会超时
+// 原因出在n上，需要把n转换成无符号数，否则可能出现移位后变成0xFFFF之类的情况，陷入死循环
 class Solution {
 public:
     const double precision = 0.0000000000000001f;
