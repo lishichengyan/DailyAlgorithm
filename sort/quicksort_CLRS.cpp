@@ -13,7 +13,7 @@ int partition(int *A, int p, int r)
 		if(A[j]<=x)
 		{
 			i++;
-			swap(A[i],A[j]);
+			swap(A[i],A[j]); // 当 i == j 时存在不必要的交换
 		}
 	}
 	swap(A[i+1],A[r]);
