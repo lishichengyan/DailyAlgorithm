@@ -37,7 +37,7 @@ void Merge(int A[],int tmpArray[],int lpos,int rpos,int rightEnd){
         tmpArray[tmp++]=A[lpos++];
     while(rpos<=rightEnd)
         tmpArray[tmp++]=A[rpos++];
-    for(int i=0;i<totalNum;i++,rightEnd--)
+    for(int i=0;i<totalNum;i++,rightEnd--) // 每一层的totalNum都是不一样的，这里只是为了从末尾把没放到A的元素放进去
         A[rightEnd]=tmpArray[rightEnd];
 }
 
