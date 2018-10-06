@@ -3,7 +3,7 @@ This repo is a collection of frequently-used algorithms 收集常用的算法
 ~~I hope I can update it daily 希望我每天都能更新它~~  
 每个目录（已经/将要）包含以下算法:  
 ## Sort  
-1. 快排 (一个版本来自Prof. Weiss所著的*Data Structure and Algorithm Analysis*，一个版本来自*CLRS*，一版本是Haskell)  
+1. 快排 (一个版本来自Prof. Weiss所著的*Data Structure and Algorithm Analysis*，一个版本来自*CLRS*，一个版本是Haskell)  
 2. 选择排序  
 3. 基数排序  
 4. 归并排序  
