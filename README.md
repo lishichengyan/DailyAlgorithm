@@ -7,7 +7,8 @@ This repo is a collection of frequently-used algorithms 收集常用的算法
 2. 选择排序  
 3. 基数排序  
 4. 归并排序  
-5. 冒泡排序  
+5. 冒泡排序
+6. 堆排序
 ## Search    
 1. 二分查找  
 2. bfs
@@ -26,9 +27,15 @@ This repo is a collection of frequently-used algorithms 收集常用的算法
 3. 后序遍历 (同上)  
 4. 中序遍历 (同上) 
 5. 层次遍历  
-6. 求树高  
-7. 二叉索引树 (Binary Indexed Tree)
-8. BST
+6. 求树高
+7. 求路径
+8. 二叉索引树 (Binary Indexed Tree)
+9. BST
+10. 最大堆
+11. 最小堆
+12. 二项堆
+13. Fibonacci堆
+14. 左式堆
 ## String  
 1. LCS (也属于DP的问题)
 ## Basic
@@ -43,6 +50,9 @@ This repo is a collection of frequently-used algorithms 收集常用的算法
 ### Divide and Conquer
 1. maximum subarray
 ### Greedy
+1. 活动安排问题
 ### Dynamic Programming
 1. subset sum problem
+2. LCS （参见String）
 ### Randomized Algorithm
+1. 随机化的快排
