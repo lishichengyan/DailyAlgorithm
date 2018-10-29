@@ -36,6 +36,8 @@ This repo is a collection of frequently-used algorithms 收集常用的算法
 12. 二项堆
 13. Fibonacci堆
 14. 左式堆
+## Union Find
+1. 并查集（普通的、含smart union和路径压缩的）
 ## String  
 1. LCS (也属于DP的问题)
 ## Basic
