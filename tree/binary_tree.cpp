@@ -91,10 +91,10 @@ TreeNode* buildTree(vector<string>& seq){
 	* para: a level-order sequence, including NULL 
 	* return: the root of the binary tree
 	*
-	* eg: 0, 1, 2, NULL, 4, NULL, NULL
+	* eg: 0, 1, 2, NULL, 4
 	*       0 
-	*		/ \
-	*     1  2
+	*      / \
+	*     1   2
 	*     \
 	*     4
 	*/
@@ -121,7 +121,8 @@ TreeNode* buildTree(vector<string>& seq){
 		} 
 		
 		// construct right subtree, similar logic
-		if(seq[i] != "NULL" && cur->right == NULL){
+		// 小心i可能越界
+		if(i < seq.size() && seq[i] != "NULL" && cur->right == NULL){
 			TreeNode* tmp = new TreeNode(stoi(seq[i]));
 			cur->right = tmp;
 			q.push(tmp);
