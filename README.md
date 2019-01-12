@@ -31,11 +31,12 @@ This repo is a collection of frequently-used algorithms 收集常用的算法
 7. 求路径
 8. 二叉索引树 (Binary Indexed Tree)
 9. BST
-10. 最大堆
-11. 最小堆
-12. 二项堆
-13. Fibonacci堆
-14. 左式堆
+10. AVL树
+11. 最大堆
+12. 最小堆
+13. 二项堆
+14. Fibonacci堆
+15. 左式堆
 ## Union Find
 1. 并查集（普通的、含smart union和路径压缩的）
 ## String  
