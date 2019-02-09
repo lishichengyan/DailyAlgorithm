@@ -2,7 +2,9 @@ class UnionFind{
 	// 我们规定：用数组来表示森林
 	// -1表示每棵树最初的父节点，-1也可以表示当前树的高度 
 	// 数字0 - N表示每个节点的编号
-	// 写的时候不要犯迷糊，disjSet_[root]是这个root的父亲，如果是unionByHeight还可以理解成求树高 
+	// 写的时候不要犯迷糊，disjSet_[root]是这个root的父亲，如果是unionByHeight还可以理解成求树高
+	// 路径压缩就是把要找的这个点以及它所有没有连在直接连在树根上祖先都连在树根上
+	// 感觉把下面的disjSet_命名成parent_会好阅读一点
 public:
 	UnionFind(int size){
 		size_ = size;
