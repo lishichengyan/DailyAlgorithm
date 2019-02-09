@@ -44,7 +44,7 @@ public:
 			return x;
 		}
 		else{
-			disjSet_[x] = find(disjSet_[x]);	
+			disjSet_[x] = findWithPathCompression(disjSet_[x]);	
 		}
 	} 
 
