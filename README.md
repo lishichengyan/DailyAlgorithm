@@ -15,11 +15,12 @@ This repo is a collection of frequently-used algorithms 收集常用的算法
 3. dfs  
 ## Graph  
 1. 图的表示 (邻接表和邻接矩阵)
-2. Dijstra最短路径算法
+2. Dijstra最短路径算法 (包括堆优化的Dijkstra)
 3. Bellman-Ford算法
 4. 拓扑排序
 5. Kruskal算法
 6. Prim算法  
+7. 环检测算法
 ## Tree  
 因为其特殊性，从Graph中单列出来  
 1. 二叉树的表示
