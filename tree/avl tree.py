@@ -14,6 +14,7 @@ class AVLTree(object):
     def __init__(self):
          self.root = None
     
+    
     # Private Methods     
     def __get_height(self, node):
         return node.height if node != None else -1
