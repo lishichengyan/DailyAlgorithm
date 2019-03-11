@@ -1,4 +1,5 @@
 # https://blog.csdn.net/Magic1an/article/details/78881665
+# https://zhuanlan.zhihu.com/p/34899732
 class TreeNode(object):
     def __init__(self, x):
         self.left = None
@@ -6,12 +7,15 @@ class TreeNode(object):
         self.val = x
         self.height = 0
  
+
 class AVLTree(object):
     def __init__(self):
          self.root = None
+    
          
     def __get_height(self, node):
         return node.height if node != None else -1
+    
     
     def __single_rotate_with_left(self, k2):
         """
@@ -28,6 +32,7 @@ class AVLTree(object):
         k1.height = max(self.__get_height(k1.left), k2.height) + 1 
         return k1
     
+    
     def __single_rotate_with_right(self, k2):
         """
              k2             k1
@@ -42,6 +47,7 @@ class AVLTree(object):
         k2.height = max(self.__get_height(k2.left), self.__get_height(k2.right)) + 1
         k1.height = max(self.__get_height(k1.right), k2.height) + 1 
         return k1
+    
     
     def __double_rotate_with_left(self, k3):
         """
@@ -70,6 +76,7 @@ class AVLTree(object):
         k3.right = self.__single_rotate_with_left(k3.right)
         return self.__single_rotate_with_right(k3)
     
+    
     def __insert(self, x, p):
         if p == None:
             p = TreeNode(x)
@@ -91,16 +98,19 @@ class AVLTree(object):
             pass
         p.height = max(self.__get_height(p.left), self.__get_height(p.right)) + 1 
         return p
-    
-    def insert(self, val):
-        self.root=self.__insert(val, self.root)
-        return self.root
+
     
     def __pre(self, node):
         if node:
             print(node.val)
             self.__pre(node.left)
             self.__pre(node.right)
+    
+            
+    def insert(self, val):
+        self.root=self.__insert(val, self.root)
+        return self.root
+    
     
     def show(self):
         self.__pre(self.root)
@@ -111,4 +121,13 @@ root.insert(3)
 root.insert(4)
 root.insert(5)
 root.insert(6)
+root.insert(1)
+root.insert(7)
+root.insert(9)
+root.insert(10)
+root.insert(11)
+root.insert(12)
+root.insert(22)
 root.show()
+
+
