@@ -1,4 +1,6 @@
+# References:
 # https://blog.csdn.net/Magic1an/article/details/78881665
+# https://zhuanlan.zhihu.com/p/34899732
 # https://www.geeksforgeeks.org/avl-tree-set-2-deletion/
 class TreeNode(object):
     def __init__(self, x):
@@ -136,7 +138,11 @@ class AVLTree(object):
             p.val = min_child.val
             p.right = self.__delete(x, p.right)
         
-        # if only a single node, return it    
+        # 这部分代码是用来维护AVL树的平衡性质的
+        # 在递归返回的时候发挥作用
+        # if only a single node, return it
+        # 这个判断p为空返回的代码可以不要，因为下面的代码对空树也是有效的
+        # 只是多了一些不必要的计算
         if p is None:
             return p
         # update height
