@@ -4,6 +4,11 @@
 
 using namespace std;
 
+// 循环不变式是i前面的元素永远比pivot大。
+// 可以这样想：当A[j]小的时候i跟进，ij重合，交换不起作用，
+// 如果A[j]大，那么ij就会远离，i留在原来比pivot小的地方，
+// 但是一越过去就比pivot大。
+// 总之就是让i一直保持在这种微妙的位置上。
 int partition(int *A, int p, int r)
 {
 	int x=A[r];
