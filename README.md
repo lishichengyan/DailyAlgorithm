@@ -45,7 +45,7 @@ This repo is a collection of frequently-used algorithms 收集常用的算法
 ## Basic
 包括了一些基本的算法，如下：
 1. 快速幂  
-2. peasant multiplication  
+2. peasant multiplication（也叫古埃及乘法、俄罗斯乘法）  
 3. 求中位数 (不用排序)  
 4. 开根号
 5. 求幂集
