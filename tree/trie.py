@@ -61,3 +61,55 @@ t.insert("ah")
 t.insert("ah")
 
 print(t.get_occurance("ah"))
+
+####################################
+# leetcode 1032
+class TrieNode:
+    def __init__(self):
+        self.ch = None  # unecessary for this problem
+        self.is_end = False
+        self.children = [None]*26
+        
+        
+class Trie():
+    def __init__(self):
+        self.root = TrieNode()
+    
+    def insert(self, s):
+        tmp = self.root
+        n  = len(s)
+        for i in range(n):
+            ch = s[len(s) - 1 - i]
+            key = ord(ch) - ord('a')
+            if tmp.children[key] is None:
+                tmp.children[key] = TrieNode()
+                tmp.children[key].ch = ch
+            else:
+                tmp.children[key].ch = ch
+            tmp = tmp.children[key]
+        tmp.is_end = True
+        
+        
+class StreamChecker:
+    def __init__(self, words: List[str]):
+        self.s = ""
+        self.trie = Trie()
+        for word in words:
+            self.trie.insert(word)
+
+    def query(self, letter: str) -> bool:
+        self.s = letter + self.s
+        tmp = self.trie.root
+        for ch in self.s:
+            key = ord(ch) - ord('a')
+            if tmp.children[key] is None:
+                return False
+            elif tmp.children[key].is_end is True:
+                return True
+            else:
+                tmp = tmp.children[key]
+        return False
+
+# Your StreamChecker object will be instantiated and called as such:
+# obj = StreamChecker(words)
+# param_1 = obj.query(letter)
