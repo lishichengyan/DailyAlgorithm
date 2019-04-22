@@ -38,6 +38,7 @@ This repo is a collection of frequently-used algorithms 收集常用的算法
 13. 二项堆
 14. Fibonacci堆
 15. 左式堆
+16. 字典树（Trie）
 ## Union Find
 1. 并查集（普通的、含smart union和路径压缩的）
 ## String  
