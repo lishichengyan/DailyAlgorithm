@@ -1,4 +1,4 @@
-# DailyAlgorithm
+# daily-algorithm
 收集常用的数据结构/算法  
 每个目录（已经/将要）包含以下数据结构/算法:  
 ## Sort  
