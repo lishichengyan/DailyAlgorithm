@@ -1,6 +1,6 @@
 class DSU(object):
     def __init__(self):
-        self.par = range(1001)
+        self.par = range(1001)  # modify to list(range(1001)) for python 3.0 and above!!!
         self.rnk = [0] * 1001
 
     def find(self, x):
