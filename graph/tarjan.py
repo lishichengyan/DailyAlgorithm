@@ -44,4 +44,45 @@ private void dfs0(int v){
 }
 """
 
+# 例题：1192. Critical Connections in a Network
+class Solution:
+    def criticalConnections(self, n, connections):
+        """
+        :type n: int
+        :type connections: List[List[int]]
+        :rtype: List[List[int]]
+        """
+        g = collections.defaultdict(list)
+        for c in connections:
+            g[c[0]].append(c[1])
+            g[c[1]].append(c[0])
+        
+        dfn, low = [0]*n, [0]*n
+        vis, par = [0]*n, [-1]*n
+        tag = 0
+        res = []
+        
+        def tarjan(v):
+            nonlocal tag
+            tag = tag + 1
+            dfn[v] = tag
+            low[v] = tag
+            
+            for w in g[v]:
+                if not vis[w]:
+                    vis[w] = 1
+                    par[w] = v
+                    tarjan(w)
+                    low[v] = min(low[v], low[w])
+                    
+                    if low[w] > dfn[v]:
+                        res.append([v, w])
+                elif par[v] != w and dfn[w] < dfn[v]:
+                    low[v] = min(low[v], dfn[w])
+        
+        for i in range(n):
+            tarjan(i)
+            
+        return res
+
 # 找SCC（有向图）
