@@ -43,3 +43,19 @@ int main()
 	cout<<endl;
 	return 0;
 } 
+
+
+
+/*
+也可以如下所示：
+def partition(self, arr, l, r):
+    pivot = arr[r]
+    i = l
+    for j in range(l, r):
+        if arr[j] <= pivot:
+	    arr[i], arr[j] = arr[j], arr[i]
+	    i += 1
+    arr[i], arr[r] = arr[r], arr[i]
+    return i
+要保持的不变式是A[i]<=pivot, A[j]>pivot
+*/
