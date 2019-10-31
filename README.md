@@ -58,6 +58,7 @@
 8. 求中位数 (不用排序)  
 9. 开根号
 10. 求幂集
+11. 单调栈找previous less，next less，previous larger，next larger
 ## Advanced Techniques  
 高级技巧不是某个具体的算法，而是算法设计的技巧/思想，各目录下包含了该学习该技巧常见的例子：
 ### Divide and Conquer
