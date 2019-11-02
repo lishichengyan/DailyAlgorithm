@@ -46,6 +46,8 @@
 1. 并查集（普通的、含smart union和路径压缩的）
 ## String  
 1. LCS (也属于DP的问题)
+2. Manacher
+3. KMP
 ## Basic
 包括了一些基本的算法，如下：
 1. 快速幂  
