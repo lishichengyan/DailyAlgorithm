@@ -1,3 +1,130 @@
+/*
+    def inorderTraversal(self, root):
+        """
+        :type root: TreeNode
+        :rtype: List[int]
+        """
+        stack = []
+        result = []
+        cur = root
+        while stack or cur:
+            while cur:
+                stack.append(cur)
+                cur = cur.left
+            cur = stack.pop()
+            result.append(cur.val)
+            cur = cur.right
+        return result
+	
+    # Morris
+    def inorderTraversal(self, root: TreeNode) -> List[int]:
+        cur, prev = root, None
+        res = []
+        while cur:
+            if cur.left is None:
+                res.append(cur.val)
+                cur = cur.right
+            else:
+                prev = cur.left
+                while prev.right and prev.right != cur:
+                    prev = prev.right
+                if prev.right is None:
+                    prev.right = cur
+                    cur = cur.left
+                else:
+                    prev.right = None
+                    res.append(cur.val)
+                    cur = cur.right
+        return res
+    # pre
+    class Solution:
+    def preorderTraversal(self, root: TreeNode) -> List[int]:
+        stack, res= [root], []
+        while stack:
+            cur = stack.pop()
+            if cur:
+                res.append(cur.val)
+            if cur and cur.right:
+                stack.append(cur.right)
+            if cur and cur.left:
+                stack.append(cur.left)
+        return res
+	
+
+*/
+
+// pre
+class Solution {
+public:
+    vector<int> preorderTraversal(TreeNode* root) {
+        vector<int> nodes;
+        stack<TreeNode*> todo;
+        while (root || !todo.empty()) {
+            if (root) {
+                nodes.push_back(root -> val);
+                if (root -> right) {
+                    todo.push(root -> right);
+                }
+                root = root -> left;
+            } else {
+                root = todo.top();
+                todo.pop();
+            }
+        }
+        return nodes;
+    }
+};
+
+// post
+class Solution {
+public:
+    vector<int> postorderTraversal(TreeNode* root) {
+        vector<int> nodes;
+        stack<TreeNode*> todo;
+        TreeNode* cur = root;
+        TreeNode* last = NULL;
+        while (cur || !todo.empty()) {
+            if (cur) {
+                todo.push(cur);
+                cur = cur -> left;
+            } else {
+                TreeNode* top = todo.top();
+                if (top -> right && (last != top -> right)) {
+                    cur = top -> right;
+                } else {
+                    nodes.push_back(top -> val);
+                    last = top;
+                    todo.pop();
+                }
+            }
+        }
+        return nodes;
+    }
+};
+
+/*
+class Solution:
+    def postorderTraversal(self, root):
+        """
+        :type root: TreeNode
+        :rtype: List[int]
+        """
+        if not root:
+            return []
+        stack, res = [], []
+        cur = root
+        
+        while stack or cur:
+            while cur:
+                stack.append(cur)
+                res.append(cur.val)
+                cur = cur.right
+            cur = stack.pop()
+            cur = cur.left
+            
+        return res[::-1]
+*/
+
 #include <iostream>
 #include <vector>
 #include <queue>
