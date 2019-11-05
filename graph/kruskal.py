@@ -1,4 +1,5 @@
 # https://leetcode.com/problems/connecting-cities-with-minimum-cost/
+# 参见https://leetcode.com/problems/connecting-cities-with-minimum-cost/discuss/344874/Python-minimum-spanning-tree-Prim's-algorithm-and-Kruskal's-algorithm
 class DSU(object):
     def __init__(self):
         self.par = list(range(10001))
