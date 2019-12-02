@@ -10,3 +10,4 @@ A red–black tree is a kind of self-balancing binary search tree in computer sc
 ## Application
 1. set and map in C++
 2. Completely Fair Scheudler in Linux Kernel
+3. epoll in Linux Kernel (I/O event notification, epoll uses a RBTree to keep track of all file descriptors that are currently being monitored)
