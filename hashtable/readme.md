@@ -18,6 +18,8 @@ In computing, a hash table (hash map) is a data structure that implements an ass
 ```F(i) = i*Hash2(key)```
 ## Rehash 
 1. Load factor
+
 ```load factor = n / k```, where ```n``` is the occupied entries, ```k``` is the number of buckets. (In a good hash table, each bucket has zero or one entries, and sometimes two or three, but rarely more than that.)
 2. When to rehash?
+
 If load factor is greater than a threshold (for example load factor of HashMap in Java10 is 0.75), we extend hash table's size (usually double).
