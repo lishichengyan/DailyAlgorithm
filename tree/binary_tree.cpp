@@ -1,4 +1,23 @@
 /*
+这种preorder的写法和inorder很像
+class Solution(object):
+    def preorderTraversal(self, root):
+        """
+        :type root: TreeNode
+        :rtype: List[int]
+        """
+        stack = []
+        res = []
+        while stack or root:
+            while root:
+                res.append(root.val)
+                stack.append(root)
+                root = root.left
+            root = stack.pop()
+            root = root.right
+        return res
+*/
+/*
     def inorderTraversal(self, root):
         """
         :type root: TreeNode
