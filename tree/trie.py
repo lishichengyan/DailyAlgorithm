@@ -1,3 +1,73 @@
+# LeetCode 208
+class TrieNode:
+    def __init__(self):
+        self._isEnd = False;
+        self._children = [None] * 26
+        
+    def get(self, ch: str) -> object:
+        return self._children[ord(ch) - ord('a')]
+    
+    def put(self, ch: str, node: object) -> None:
+        self._children[ord(ch) - ord('a')] = node
+        
+    def isEnd(self) -> bool:
+        return self._isEnd
+    
+    def setEnd(self) -> None:
+        self._isEnd = True
+    
+    def containsKey(self, ch: str) -> bool:
+        return self._children[ord(ch) - ord('a')] != None
+    
+    
+class Trie:
+
+    def __init__(self):
+        """
+        Initialize your data structure here.
+        """
+        self.root = TrieNode()
+        
+    def insert(self, word: str) -> None:
+        """
+        Inserts a word into the trie.
+        """
+        node = self.root
+        for ch in word:
+            if not node.containsKey(ch):
+                node.put(ch, TrieNode())
+            node = node.get(ch)
+        node.setEnd()
+        
+    def search(self, word: str) -> bool:
+        """
+        Returns if the word is in the trie.
+        """
+        node = self.root
+        for ch in word:
+            if not node.containsKey(ch):
+                return False
+            node = node.get(ch)
+        return node.isEnd()
+
+    def startsWith(self, prefix: str) -> bool:
+        """
+        Returns if there is any word in the trie that starts with the given prefix.
+        """
+        node = self.root
+        for ch in prefix:
+            if not node.containsKey(ch):
+                return False
+            node = node.get(ch)
+        return True
+
+
+# Your Trie object will be instantiated and called as such:
+# obj = Trie()
+# obj.insert(word)
+# param_2 = obj.search(word)
+# param_3 = obj.startsWith(prefix)
+#####################################################################################################
 class TrieNode:
     def __init__(self):
         self.ch = None  # 储存字符
