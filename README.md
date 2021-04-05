@@ -64,6 +64,6 @@
 ### Dynamic Programming
 1. subset sum problem
 2. LCS
-### Randomized Algorithm
+## Randomized Algorithm
 1. 随机化的快排
 2. 跳表
